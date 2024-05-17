@@ -9,5 +9,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration{
                 name: '/Applications/Google Chrome.app',
             }
         },
+        historyApiFallback: true,
     }
 }
