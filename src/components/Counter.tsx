@@ -10,6 +10,7 @@ export const Counter = () => {
 
     return (
         <div className={classes.btn}>
+            <div style={{fontFamily:"Consolas"}}>Test line</div>
             <div>{count}</div>
             <button onClick={increment}>Increment</button>
         </div>
