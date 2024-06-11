@@ -1,15 +1,16 @@
 import React, {Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom'
-import {Counter} from "./components/Counter";
 import './styles/index.scss';
-import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
-import {MainPageAsync} from "./pages/MainPage/MainPage.async";
-import {useTheme} from "./theme/useTheme";
-import {classNames} from "./helpers/className";
+// import {AboutPageAsync} from "/pages/AboutPage/AboutPage.async";
+import {AboutPageAsync} from "../pages/AboutPage/AboutPage.async";
+import {MainPageAsync} from "../pages/MainPage/MainPage.async";
+import {classNames} from "/helpers/className";
+import {useTheme} from "app/provider/ThermProvider";
 
 
 const App = () => {
     const {theme, toggleTheme} = useTheme();
+
     return (
         <div className={classNames('app', {hovered: true, selected: false},[theme, 'cls2', 'cls3'])}>
             <button onClick={toggleTheme}>TOGGLE</button>
@@ -22,7 +23,6 @@ const App = () => {
                 </Routes>
             </Suspense>
             Test text
-            <Counter/>
         </div>
     );
 };
