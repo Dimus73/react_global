@@ -7,6 +7,7 @@ import {classNames} from "../shared/lib/className/className";
 import {useTheme} from "app/provider/ThermProvider";
 import {AboutPage} from "pages/AboutPage";
 import {MainPage} from "pages/MainPage";
+import {AppRouter} from "app/provider/router";
 
 
 const App = () => {
@@ -17,12 +18,7 @@ const App = () => {
             <button onClick={toggleTheme}>TOGGLE</button>
             <Link to={'/'}>Главная</Link>
             <Link to={'/about'}>О сайте</Link>
-            <Suspense fallback={<div>Loading</div>}>
-                <Routes>
-                    <Route path={'/about'} element={<AboutPage/>}/>
-                    <Route path={'/'} element={<MainPage/>}/>
-                </Routes>
-            </Suspense>
+            <AppRouter/>
             Test text
         </div>
     );
