@@ -13,10 +13,10 @@ const App = () => {
     const {theme, toggleTheme} = useTheme();
 
     return (
-        <div className={classNames('app', {hovered: true, selected: false},[theme, 'cls2', 'cls3'])}>
-            <button onClick={toggleTheme}>TOGGLE</button>
-            <Navbar />
+        <div className={classNames('app', {hovered: true, selected: false}, [theme, 'cls2', 'cls3'])}>
+            <Navbar/>
             <AppRouter/>
+            <button onClick={toggleTheme}>TOGGLE</button>
             Test text
         </div>
     );
