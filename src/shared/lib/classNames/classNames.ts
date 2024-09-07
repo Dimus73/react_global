@@ -5,10 +5,10 @@ type Modes = Record<string, boolean | string>
 //     'hovered':
 // }
 
-export function classNames(cls: string, mods:Modes, additional:string[]): string {
+export function classNames(cls: string, mods?:Modes, additional?:string[]): string {
     return [
         cls,
-        ...additional,
+        ...additional.filter(Boolean),
         ...Object.entries(mods)
             .filter(([className,value]) => Boolean(value))
             .map(([className, value])=>className)

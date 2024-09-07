@@ -11,7 +11,11 @@ export default (env: BuildEnv) => {
         build: path.resolve(__dirname, 'build'),
         html: path.resolve(__dirname, 'public', 'index.html'),
         src: path.resolve(__dirname, 'src'),
+        assert: path.resolve(__dirname),
+        public: path.resolve(__dirname, 'public'),
     }
+
+    console.log(paths);
 
     const mode = env.mode || "development"
     const isDev = mode === "development"
