@@ -10,13 +10,13 @@ import { Navbar } from 'widgets/Navbar';
 
 
 const App = () => {
-    const {theme, toggleTheme} = useTheme();
+    const {theme} = useTheme();
 
     return (
         <div className={classNames('app', {hovered: true, selected: false}, [theme, 'cls2', 'cls3'])}>
             <Navbar/>
             <AppRouter/>
-            <button onClick={toggleTheme}>TOGGLE</button>
+            {/*<button onClick={toggleTheme}>TOGGLE</button>*/}
             Test text
         </div>
     );
