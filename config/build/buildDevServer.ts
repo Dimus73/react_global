@@ -19,6 +19,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration{
             {
                 directory: paths.assert,
             },
-        ]
+        ],
+        hot: true,
     }
 }
