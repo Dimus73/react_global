@@ -1,4 +1,3 @@
-
 type Modes = Record<string, boolean | string>
 
 // const obj: Modes = {
@@ -10,8 +9,8 @@ export function classNames(cls: string, mods?:Modes, additional?:string[]): stri
         cls,
         ...additional.filter(Boolean),
         ...Object.entries(mods)
-            .filter(([className,value]) => Boolean(value))
-            .map(([className, value])=>className)
+            .filter(([className, value]) => Boolean(value))
+            .map(([className, value]) => className),
     ]
-        .join(' ')
+        .join(' ');
 }
