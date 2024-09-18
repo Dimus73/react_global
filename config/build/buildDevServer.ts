@@ -1,11 +1,11 @@
-import {BuildOptions} from "./types/config";
-import type {Configuration as DevServerConfiguration} from 'webpack-dev-server'
-import path from "path";
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import path from 'path';
+import { BuildOptions } from './types/config';
 
-export function buildDevServer(options: BuildOptions): DevServerConfiguration{
-    const {paths} = options
+export function buildDevServer(options: BuildOptions): DevServerConfiguration {
+    const { paths } = options;
     return {
-        port:options.port,
+        port: options.port,
         open: {
             app: {
                 name: '/Applications/Google Chrome.app',
@@ -21,5 +21,5 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration{
             },
         ],
         hot: true,
-    }
+    };
 }
