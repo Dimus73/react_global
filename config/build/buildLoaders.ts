@@ -4,7 +4,7 @@ import { BuildOptions } from './types/config';
 
 export function buildLoaders({ isDev }:BuildOptions): webpack.RuleSetRule[] {
     // const typescriptLoader: webpack.RuleSetRule = {
-    //     test: /\.tsx?$/,
+    //     tests: /\.tsx?$/,
     //     use: 'ts-loader',
     //     exclude: /node_modules/,
     // };
@@ -13,21 +13,21 @@ export function buildLoaders({ isDev }:BuildOptions): webpack.RuleSetRule[] {
         test: /\.(js|jsx|tsx)$/,
         exclude: /node_modules/,
         use: {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
                 presets: ['@babel/preset-env'],
-                "plugins": [
+                plugins: [
                     [
-                        "i18next-extract",
+                        'i18next-extract',
                         {
                             locales: ['ru', 'en'],
-                            keyAsDefaultValue: true
-                        }
+                            keyAsDefaultValue: true,
+                        },
                     ],
-                ]
-            }
-        }
-    }
+                ],
+            },
+        },
+    };
 
     const svgLoader = {
         test: /\.svg$/,
